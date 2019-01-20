@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_01_20_214022) do
+ActiveRecord::Schema.define(version: 2019_01_20_220003) do
 
   create_table "guides", force: :cascade do |t|
     t.integer "tracking_number"
@@ -27,6 +27,8 @@ ActiveRecord::Schema.define(version: 2019_01_20_214022) do
     t.string "mass_unit"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "guides_id"
+    t.index ["guides_id"], name: "index_parcels_on_guides_id"
   end
 
 end

@@ -1,24 +1,38 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Model architecture
 
-Things you may want to cover:
+See here:
 
-* Ruby version
+[https://drive.google.com/file/d/1bDo6i1cAGNJJb5ylFJyhi0eCSNOXUkZt/view?usp=sharing](https://drive.google.com/file/d/1bDo6i1cAGNJJb5ylFJyhi0eCSNOXUkZt/view?usp=sharing)
 
-* System dependencies
+## Model setup
 
-* Configuration
+```yml
+development:
+  adapter:  postgresql
+  host:     localhost
+  encoding: unicode
+  database: rails-prueba-sobrepeso_development
+  pool:     5
+  username: rails-prueba-sobrepeso
+  password:
 
-* Database creation
+test:
+  adapter:  postgresql
+  host:     localhost
+  encoding: unicode
+  database: rails-prueba-sobrepeso_test
+  pool:     5
+  username: rails-prueba-sobrepeso
+  password:
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+production:
+  adapter:  postgresql
+  host:     localhost
+  encoding: unicode
+  database: rails-prueba-sobrepeso_production
+  pool:     5
+  username: rails-prueba-sobrepeso
+  password:
+```

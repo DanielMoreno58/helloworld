@@ -10,11 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_01_20_210817) do
+ActiveRecord::Schema.define(version: 2019_01_20_214022) do
 
   create_table "guides", force: :cascade do |t|
     t.integer "tracking_number"
     t.string "carrier"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "parcels", force: :cascade do |t|
+    t.float "length"
+    t.float "width"
+    t.float "height"
+    t.string "distance_unit"
+    t.string "mass_unit"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
